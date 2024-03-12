@@ -1,4 +1,4 @@
-const str: string = 'Hello'
+const str1: string = 'Hello'
 const isFetching: boolean = true
 
 const int: number = 42
@@ -13,10 +13,22 @@ const numberArray2: Array<number> = [1, 1, 2, 3, 5, 8, 13] // Дженерик �
 const words: string[] = ['Hello', 'TypeScript']
 
 // Tuple 
-const contact: [string, number] = ['Vladilen', 1234567]
+const contact: [string, number] = ['Vladilen', 1234567] // Turple - несколько типов в массиве
 
 // Any
 let variable: any = 42 // "any" Сделать из переменной любой тип данных
 
 variable = 'New String'
 variable = []
+
+// =================
+function sayMyName(name: string): void {
+    console.log(name)
+}
+
+sayMyName('Хайзенберг')
+
+// Never
+function throwError(message: string): never { // Never - значит что действие будет происходить постояно
+    throw new Error(message)
+}
