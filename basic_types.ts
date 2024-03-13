@@ -1,3 +1,4 @@
+// ========= Basic Types =========
 const str1: string = 'Hello'
 const isFetching: boolean = true
 
@@ -21,7 +22,9 @@ let variable: any = 42 // "any" Сделать из переменной люб�
 variable = 'New String'
 variable = []
 
-// =================
+
+
+// ======== Function =========
 function sayMyName(name: string): void {
     console.log(name)
 }
@@ -32,3 +35,13 @@ sayMyName('Хайзенберг')
 function throwError(message: string): never { // Never - значит что действие будет происходить постояно
     throw new Error(message)
 }
+
+
+
+// ========= Type =========
+type Login = string // Type - создание своих типов данных 
+const login: Login = 'admin'
+
+type ID = string | number
+const id1: ID = 1234
+const id2: ID = '1234'
